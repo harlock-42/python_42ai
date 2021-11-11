@@ -21,7 +21,8 @@ class File(object):
 		while data:
 			data = self.file_obj.readline()
 			data1 = data.split(self.sep)
-			res.append(data1)
+			if data:
+				res.append(data1)
 		res = res[self.skip_top:]
 		if self.skip_bottom > 0:
 			index = self.skip_bottom * -1
